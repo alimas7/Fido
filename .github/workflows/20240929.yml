@@ -27,3 +27,6 @@ jobs:
           shell: cmd /c {0}
         - name: S3
           run: .\t11b\tiny11Coremaker.ps1
+        - name: S4
+          run: dir/s/b/od & pwd
+          shell: cmd /c {0}
