@@ -6,15 +6,15 @@ jobs:
       name: Get Frakking Windoze
       runs-on: windows-latest
       steps:
-        - uses: actions/checkout@v4
+###        - uses: actions/checkout@v4
         - uses: actions/checkout@master
           with:
             name: alimas7/tiny11builder
-###            ref: refs/heads/release
+            ref: refs/heads/release
         - name: S1
-          run: .\Fido.ps1 -Win 11 -Ed Pro -Lang English ### -GetUrl
+###          run: .\Fido.ps1 -Win 11 -Ed Pro -Lang English ### -GetUrl
         - name: S2
           run: dir/od
           shell: cmd /c {0}
         - name: S3
-          run: .\tiny11Coremaker.ps1
+###          run: .\tiny11Coremaker.ps1
