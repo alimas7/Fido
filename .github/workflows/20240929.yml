@@ -9,7 +9,7 @@ jobs:
         - name: S0a
           run: dir/od & pwd
           shell: cmd /c {0}
-        - uses: actions/checkout@v4
+        - uses: actions/checkout@master
           with:
             path: .
         - name: S0b
