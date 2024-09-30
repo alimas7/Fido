@@ -7,10 +7,10 @@ jobs:
       runs-on: windows-latest
       steps:
 ###        - uses: actions/checkout@v4
-        - uses: actions/checkout@master
+        - uses: actions/checkout@v4
           with:
             name: alimas7/tiny11builder
-            ref: refs/heads/release
+###            ref: refs/heads/release
         - name: S1
           run: notepad ### .\Fido.ps1 -Win 11 -Ed Pro -Lang English ### -GetUrl
         - name: S2
