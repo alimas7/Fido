@@ -1,0 +1,11 @@
+name: Frak Windoze
+on: [workflow_dispatch]
+
+jobs:
+    build:
+      name: Get Frakking Windoze
+      runs-on: windows-latest
+      steps:
+        - uses: actions/checkout@v1
+        - name: Script
+          run: .\Fido.ps1 -Win 11 -Ed Pro -GetUrl
