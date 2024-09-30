@@ -11,7 +11,7 @@ jobs:
           shell: cmd /c {0}
         - uses: actions/checkout@v4
             with:
-            path: .
+              path: .
         - name: S0b
           run: dir/od & pwd
           shell: cmd /c {0}
