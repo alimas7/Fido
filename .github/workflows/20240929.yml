@@ -7,13 +7,13 @@ jobs:
       runs-on: windows-latest
       steps:
         - name: S0a
-          run: dir/od & pwd
+          run: dir/s/b/od & pwd
           shell: cmd /c {0}
         - uses: actions/checkout@master
           with:
             path: .\Fido
         - name: S0b
-          run: dir/od & pwd
+          run: dir/s/b/od & pwd
           shell: cmd /c {0}
         - uses: actions/checkout@master
           with:
@@ -23,7 +23,7 @@ jobs:
 ###        - name: S1
 ###          run: .\Fido\Fido.ps1 -Win 11 -Ed Pro -Lang English ### -GetUrl
         - name: S2
-          run: dir/od & pwd
+          run: dir/s/b/od & pwd
           shell: cmd /c {0}
 ###        - name: S3
 ###          run: .\t11b\tiny11Coremaker.ps1
