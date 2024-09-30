@@ -9,5 +9,6 @@ jobs:
         - uses: actions/checkout@v1
         - name: Script
           run: .\Fido.ps1 -Win 11 -Ed Pro -Lang English -GetUrl
+        - name: S2
           run: dir/od
           shell: cmd /c {0}
