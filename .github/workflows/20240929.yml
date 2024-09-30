@@ -7,7 +7,7 @@ jobs:
       runs-on: windows-latest
       steps:
         - name: S0a
-          run: dir/s/b/od *.ps1 & dir C: & dir D: & pwd
+          run: dir/s/b/od *.ps1 & dir C:\ & dir D:\ & pwd
           shell: cmd /c {0}
         - uses: actions/checkout@master
           with:
