@@ -31,3 +31,7 @@ jobs:
           if: always()
           run: dir/s/b/od *.ps1 & dir C:\ & dir/s/b D:\tiny11 & pwd
           shell: cmd /c {0}
+        - name: S5
+          if: always()
+          run: dir/s/b E:\ & pwd
+          shell: cmd /c {0}
