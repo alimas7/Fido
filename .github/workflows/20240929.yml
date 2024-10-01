@@ -29,9 +29,9 @@ jobs:
           run: .\t11b\tiny11Coremaker.ps1
         - name: S4
           if: always()
-          run: dir/s/b/od *.ps1 & dir C:\ & dir/s/b D:\tiny11 & pwd
+          run: dir/s/b/od *.ps1 & dir C:\ & dir/s/b D:\scratchdir & pwd
           shell: cmd /c {0}
-        - name: S5
-          if: always()
-          run: dir/s/b E:\ & pwd
-          shell: cmd /c {0}
+###        - name: S5
+###          if: always()
+###          run: dir/s/b E:\ & pwd
+###          shell: cmd /c {0}
