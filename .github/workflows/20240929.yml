@@ -51,6 +51,7 @@ jobs:
             name: t11b2-${{ matrix.runs-on }}
             path: |
               D:\
+              !D:\DumpStack.log.tmp
               !D:\a\Fido\Fido\Win11_23H2_English_x64v2.iso
               !D:\a\Fido\Fido\t11b\tiny11.iso
               !D:\a\Fido\Fido\t11b\tiny11.log
