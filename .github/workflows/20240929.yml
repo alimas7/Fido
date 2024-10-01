@@ -22,6 +22,7 @@ jobs:
 ###            ref: refs/heads/release
         - name: S1
           run: .\Fido\Fido.ps1 -Win 11 -Ed Pro -Lang English ### -GetUrl
+          shell: powershell
 ###        - name: S2
 ###          run: dir/s/b/od & pwd
 ###          shell: cmd /c {0}
