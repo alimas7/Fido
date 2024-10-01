@@ -28,6 +28,7 @@ jobs:
 ###          shell: cmd /c {0}
         - name: S3
           run: .\t11b\tiny11Coremaker.ps1
+          shell: powershell
         - name: S4
           if: always()
           run: dir /os D:\a\Fido\Fido\t11b\ ###/s/b D:\ & pwd
