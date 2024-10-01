@@ -6,15 +6,15 @@ jobs:
       name: Get Frakking Windoze
       runs-on: windows-latest
       steps:
-        - name: S0a
-          run: dir/s/b/od *.ps1 & dir C:\ & dir D:\ & pwd
-          shell: cmd /c {0}
+###        - name: S0a
+###          run: dir/s/b/od *.ps1 & dir C:\ & dir D:\ & pwd
+###          shell: cmd /c {0}
         - uses: actions/checkout@master
           with:
             path: .\Fido
-        - name: S0b
-          run: dir/s/b/od *.ps1 & pwd
-          shell: cmd /c {0}
+###        - name: S0b
+###          run: dir/s/b/od *.ps1 & pwd
+###          shell: cmd /c {0}
         - uses: actions/checkout@master
           with:
             path: .\t11b
