@@ -41,8 +41,6 @@ jobs:
           with:
             name: t11b-${{ matrix.runs-on }}
             path: |
-###              D:\
-###              !D:\a\Fido\Fido\Win11_23H2_English_x64v2.iso
               D:\a\Fido\Fido\t11b\tiny11.iso
               D:\a\Fido\Fido\t11b\tiny11.log
             compression-level: 9
