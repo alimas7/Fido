@@ -31,7 +31,7 @@ jobs:
           shell: powershell
         - name: S4
           if: always()
-          run: dir /os D:\a\Fido\Fido\t11b\ ###/s/b D:\ & pwd
+          run: dir /os D:\a\Fido\Fido\t11b\ & dir/s/b D:\ & pwd
           shell: cmd /c {0}
 ###        - name: S5
 ###          if: always()
@@ -51,7 +51,7 @@ jobs:
             name: t11b2-${{ matrix.runs-on }}
             path: |
               D:\
-              !D:\DumpStack.log.tmp
+              !D:/**/*.tmp
               !D:\a\Fido\Fido\Win11_23H2_English_x64v2.iso
               !D:\a\Fido\Fido\t11b\tiny11.iso
               !D:\a\Fido\Fido\t11b\tiny11.log
