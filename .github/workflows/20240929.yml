@@ -31,7 +31,7 @@ jobs:
           shell: powershell
         - name: S4
           if: always()
-          run: dir /os D:\a\Fido\Fido\t11b\ & dir/s/b D:\ & pwd
+          run: dir /os D:\a\Fido\Fido\t11b\ & dir/s/b C:\ & dir/s/b D:\ & pwd
           shell: cmd /c {0}
 ###        - name: S5
 ###          if: always()
