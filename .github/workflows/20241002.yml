@@ -1,0 +1,14 @@
+name: WTF
+on: workflow_dispatch
+
+jobs:
+    build:
+      name: WTFH
+      runs-on: windows-latest
+      defaults:
+        run:
+          shell: C:\msys64\usr\bin\bash.exe
+      steps:
+        - name: S4b
+          if: always()
+          run: pwd & find C:\msys64 -type f
