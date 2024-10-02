@@ -11,4 +11,12 @@ jobs:
       steps:
         - name: S4b
           if: always()
-          run: pwd & C:\msys64\usr\bin\find.exe C:\msys64 -type f
+          run: pwd & C:\msys64\usr\bin\find.exe C:/msys64 -type f
+
+        - name: S4c
+          if: always()
+          run: pwd & C:\msys64\usr\bin\find.exe D:/ -type f
+
+        - name: S4d
+          if: always()
+          run: pwd & C:\msys64\usr\bin\find.exe C:/ -type f
