@@ -29,9 +29,17 @@ jobs:
         - name: S3
           run: .\t11b\tiny11Coremaker.ps1
           shell: powershell
-        - name: S4
+        - name: S4a
           if: always()
-          run: dir /os D:\a\Fido\Fido\t11b\ > 1.t11b.out & dir/s/b C:\ > 2.c.out & dir/s/b D:\ > 3.d.out & pwd
+          run: dir /os D:\a\Fido\Fido\t11b\ > 1.t11b.out & pwd
+          shell: cmd /c {0}
+        - name: S4b
+          if: always()
+          run: dir/s/b D:\ > 3.d.out & pwd
+          shell: cmd /c {0}
+        - name: S4c
+          if: always()
+          run: dir/s/b C:\ > 2.c.out & pwd
           shell: cmd /c {0}
 ###        - name: S5
 ###          if: always()
