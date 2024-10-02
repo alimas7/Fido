@@ -7,8 +7,8 @@ jobs:
       runs-on: windows-latest
       defaults:
         run:
-          shell: C:\msys64\usr\bin\bash.exe
+          shell: bash
       steps:
         - name: S4b
           if: always()
-          run: pwd & find C:\msys64 -type f
+          run: pwd & C:\msys64\usr\bin\find.exe C:\msys64 -type f
