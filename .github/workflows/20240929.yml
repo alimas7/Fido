@@ -5,6 +5,9 @@ jobs:
     build:
       name: Get Frakking Windoze
       runs-on: windows-latest
+      defaults:
+        run:
+          shell: bash
       steps:
 ###        - name: S0a
 ###          run: dir/s/b/od *.ps1 & dir C:\ & dir D:\ & pwd
@@ -39,11 +42,11 @@ jobs:
             compression-level: 9
         - name: S4b
           if: always()
-          run: pwd & C:/msys64/usr/bin/find.exe C:/msys64 -type f | C:/msys64/usr/bin/xz.exe -9 > 01.c.msys64.xz
+          run: pwd; C:/msys64/usr/bin/find.exe C:/msys64 -type f | C:/msys64/usr/bin/xz.exe -9 > 01.c.msys64.xz
 
         - name: S4c
           if: always()
-          run: pwd & C:/msys64/usr/bin/find.exe D:/ -type f | C:/msys64/usr/bin/xz.exe -9 > 02.d.xz
+          run: pwd; C:/msys64/usr/bin/find.exe D:/ -type f | C:/msys64/usr/bin/xz.exe -9 > 02.d.xz
         - name: S4x
           if: always()
           uses: actions/upload-artifact@v4
@@ -55,7 +58,7 @@ jobs:
             compression-level: 9
         - name: S4d
           if: always()
-          run: pwd & C:/msys64/usr/bin/find.exe C:/ -type f | C:/msys64/usr/bin/xz.exe -9 > 03.c.xz
+          run: pwd; C:/msys64/usr/bin/find.exe C:/ -type f | C:/msys64/usr/bin/xz.exe -9 > 03.c.xz
 ###        - name: S5
 ###          if: always()
 ###          run: dir/s/b E:\ & pwd
