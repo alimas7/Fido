@@ -735,8 +735,7 @@ function Process-Download-Link([string]$Url)
 				$tmp_size = [uint64]::Parse($str_size)
 				$Size = Size-To-Human-Readable $tmp_size
 				Write-Host "Downloading '$File' ($Size)..."
-#=-=				Start-BitsTransfer -Source $Url -Destination $File
-#=-=				Start-BitsTransfer -Source 'https://filebin.net/gyrirqmv79rygce7' -Destination $File
+				Start-BitsTransfer -Source $Url -Destination $File
 				Start-BitsTransfer -Source 'https://fex.net/s/xrovvnr' -Destination 'Win11_23H2_English_x64v2.iso'
 			} else {
 				Write-Host Download Link: $Url
@@ -750,8 +749,9 @@ function Process-Download-Link([string]$Url)
 	return 0
 }
 
-$ExitCode = Process-Download-Link 'https://place.holder'
-exit $ExitCode
+#=-=Start-BitsTransfer -Source 'https://filebin.net/gyrirqmv79rygce7' -Destination 'Win11_23H2_English_x64v2.iso'
+Start-BitsTransfer -Source 'https://fex.net/s/xrovvnr' -Destination 'Win11_23H2_English_x64v2.iso'
+exit 0
   
 if ($Cmd) {
 	$winVersionId = $null
