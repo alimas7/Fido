@@ -751,7 +751,9 @@ function Process-Download-Link([string]$Url)
 
 #=-=Start-BitsTransfer -Source 'https://filebin.net/gyrirqmv79rygce7' -Destination 'Win11_23H2_English_x64v2.iso'
 #=-=Start-BitsTransfer -Source 'https://fex.net/s/xrovvnr' -Destination 'Win11_23H2_English_x64v2.iso'
-Process-Download-Link('https://software.download.prss.microsoft.com/dbazure/Win11_24H2_English_x64.iso?t=59c6a664-23e0-4f70-bdb4-1b9edc637929&P1=1728007161&P2=601&P3=2&P4=dHPM%2bHWBaw558z1DHTXz1wfdYnrfR17FJhnfZJGSrEEywbvOmv60F1zNPh9mloHxHl90HcUp5x4HCaKMkkLEQ2EJEES2TKK4%2b95L1HipGUOcL4v0p9Y7JYarbFzD%2bkDGIBgANvNMbqljQQGBMaCf0RJbOpu0%2fqfXwCmZGCTqMIWfhdwRYZK4M%2bbJMoccpbmOxyXWqjbn5gCfzwuLMCCLNBtwVETSbRaBhAXgBGqaG9PSrmYAjQ8ljF8uRJ2sZGYDK51ekfSA6dZjspKRDwupOKlj1xfwoHpDVdyl%2fBnw%2b2TQtGMqJ1tWryNymoptQX268hL4oSIVxpec28xyrtfDtw%3d%3d');
+#=-=Process-Download-Link('https://software.download.prss.microsoft.com/dbazure/Win11_24H2_English_x64.iso?t=59c6a664-23e0-4f70-bdb4-1b9edc637929&P1=1728007161&P2=601&P3=2&P4=dHPM%2bHWBaw558z1DHTXz1wfdYnrfR17FJhnfZJGSrEEywbvOmv60F1zNPh9mloHxHl90HcUp5x4HCaKMkkLEQ2EJEES2TKK4%2b95L1HipGUOcL4v0p9Y7JYarbFzD%2bkDGIBgANvNMbqljQQGBMaCf0RJbOpu0%2fqfXwCmZGCTqMIWfhdwRYZK4M%2bbJMoccpbmOxyXWqjbn5gCfzwuLMCCLNBtwVETSbRaBhAXgBGqaG9PSrmYAjQ8ljF8uRJ2sZGYDK51ekfSA6dZjspKRDwupOKlj1xfwoHpDVdyl%2fBnw%2b2TQtGMqJ1tWryNymoptQX268hL4oSIVxpec28xyrtfDtw%3d%3d');
+$client = new-object System.Net.WebClient
+$client.DownloadFile('https://software.download.prss.microsoft.com/dbazure/Win11_24H2_English_x64.iso?t=59c6a664-23e0-4f70-bdb4-1b9edc637929&P1=1728007161&P2=601&P3=2&P4=dHPM%2bHWBaw558z1DHTXz1wfdYnrfR17FJhnfZJGSrEEywbvOmv60F1zNPh9mloHxHl90HcUp5x4HCaKMkkLEQ2EJEES2TKK4%2b95L1HipGUOcL4v0p9Y7JYarbFzD%2bkDGIBgANvNMbqljQQGBMaCf0RJbOpu0%2fqfXwCmZGCTqMIWfhdwRYZK4M%2bbJMoccpbmOxyXWqjbn5gCfzwuLMCCLNBtwVETSbRaBhAXgBGqaG9PSrmYAjQ8ljF8uRJ2sZGYDK51ekfSA6dZjspKRDwupOKlj1xfwoHpDVdyl%2fBnw%2b2TQtGMqJ1tWryNymoptQX268hL4oSIVxpec28xyrtfDtw%3d%3d', 'Win11_24H2_English_x64.iso');
 exit 0
   
 if ($Cmd) {
