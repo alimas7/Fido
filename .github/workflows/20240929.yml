@@ -24,7 +24,7 @@ jobs:
             repository: alimas7/tiny11builder
 ###            ref: refs/heads/release
         - name: S1
-          run: Set-PSDebug -Trace 1 ; .\Fido\Fido.ps1 -Win 11 -Ed Pro -Lang English -Rel Latest ###-GetUrl
+          run: Set-PSDebug -Trace 0 ; .\Fido\Fido.ps1 -Win 11 -Ed Pro -Lang English -Rel Latest ###-GetUrl
           shell: powershell
 ###        - name: S2
 ###          run: dir/s/b/od & pwd
