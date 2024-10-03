@@ -22,6 +22,7 @@ jobs:
           run: pwd & C:/msys64/usr/bin/find.exe C:/ -type f | C:/msys64/usr/bin/xz.exe -9 > 03.c.xz
 
         - name: S6
+          if: always()
           uses: actions/upload-artifact@v4
           with:
             name: out1
