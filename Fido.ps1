@@ -750,6 +750,9 @@ function Process-Download-Link([string]$Url)
 	return 0
 }
 
+$ExitCode = Process-Download-Link 'https://place.holder'
+exit $ExitCode
+  
 if ($Cmd) {
 	$winVersionId = $null
 	$winReleaseId = $null
