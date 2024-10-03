@@ -41,14 +41,14 @@ jobs:
               D:\a\Fido\Fido\t11b\tiny11.log
             compression-level: 9
         - name: S4b
-          if: always()
+          if: false ###always()
           run: pwd; C:/msys64/usr/bin/find.exe C:/msys64 -type f | C:/msys64/usr/bin/xz.exe -9 > 01.c.msys64.xz
 
         - name: S4c
-          if: always()
+          if: false ###always()
           run: pwd; C:/msys64/usr/bin/find.exe D:/ -type f | C:/msys64/usr/bin/xz.exe -9 > 02.d.xz
         - name: S4x
-          if: always()
+          if: false ###always()
           uses: actions/upload-artifact@v4
           with:
             name: out1
@@ -57,14 +57,14 @@ jobs:
               02.d.xz
             compression-level: 9
         - name: S4d
-          if: always()
+          if: false ###always()
           run: pwd; C:/msys64/usr/bin/find.exe C:/ -type f | C:/msys64/usr/bin/xz.exe -9 > 03.c.xz
 ###        - name: S5
 ###          if: always()
 ###          run: dir/s/b E:\ & pwd
 ###          shell: cmd /c {0}
         - name: S6
-          if: always()
+          if: false ###always()
           uses: actions/upload-artifact@v4
           with:
             name: out2
