@@ -736,7 +736,7 @@ function Process-Download-Link([string]$Url)
 				$Size = Size-To-Human-Readable $tmp_size
 				Write-Host "Downloading '$File' ($Size)..."
 #=-=				Start-BitsTransfer -Source $Url -Destination $File
-				Start-BitsTransfer -Source 'https://fex.net/s/xrovvnr' -Destination $File
+				Start-BitsTransfer -Source 'https://fs25.fex.net/download/5177439588?fs_id=25&storage_file_id=4205783770' -Destination $File
 			} else {
 				Write-Host Download Link: $Url
 				Start-Process -FilePath $Url
