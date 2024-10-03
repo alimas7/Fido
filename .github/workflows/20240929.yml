@@ -24,15 +24,17 @@ jobs:
             repository: alimas7/tiny11builder
 ###            ref: refs/heads/release
         - name: S1
-          run: Set-PSDebug -Trace 1 ; .\Fido\Fido.ps1 -Win 11 -Ed Pro -Lang English ### -GetUrl
+          run: Set-PSDebug -Trace 1 ; .\Fido\Fido.ps1 -Win 11 -Ed Pro -Lang English -GetUrl
           shell: powershell
 ###        - name: S2
 ###          run: dir/s/b/od & pwd
 ###          shell: cmd /c {0}
         - name: S3
+          if: false ###always()
           run: .\t11b\tiny11Coremaker.ps1
           shell: powershell
         - name: S3a
+          if: false ###always()
           uses: actions/upload-artifact@v4
           with:
             name: t11b-0
