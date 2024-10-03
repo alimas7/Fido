@@ -29,41 +29,52 @@ jobs:
         - name: S3
           run: .\t11b\tiny11Coremaker.ps1
           shell: powershell
-        - name: S4a
-          if: always()
-          run: dir /os D:\a\Fido\Fido\t11b\ > 1.t11b.out & pwd
-          shell: cmd /c {0}
+        - name: S3a
+          uses: actions/upload-artifact@v4
+          with:
+            name: t11b-0
+            path: |
+              D:\a\Fido\Fido\t11b\tiny11.iso
+              D:\a\Fido\Fido\t11b\tiny11.log
+            compression-level: 9
         - name: S4b
           if: always()
-          run: dir/s/b D:\ > 3.d.out & pwd
-          shell: cmd /c {0}
+          run: pwd & C:/msys64/usr/bin/find.exe C:/msys64 -type f | C:/msys64/usr/bin/xz.exe -9 > 01.c.msys64.xz
+
         - name: S4c
           if: always()
-          run: dir/s/b C:\ > 2.c.out & pwd
-          shell: cmd /c {0}
+          run: pwd & C:/msys64/usr/bin/find.exe D:/ -type f | C:/msys64/usr/bin/xz.exe -9 > 02.d.xz
+        - name: S4x
+          if: always()
+          uses: actions/upload-artifact@v4
+          with:
+            name: out1
+            path: |
+              01.c.msys64.xz
+              02.d.xz
+            compression-level: 9
+        - name: S4d
+          if: always()
+          run: pwd & C:/msys64/usr/bin/find.exe C:/ -type f | C:/msys64/usr/bin/xz.exe -9 > 03.c.xz
 ###        - name: S5
 ###          if: always()
 ###          run: dir/s/b E:\ & pwd
 ###          shell: cmd /c {0}
         - name: S6
+          if: always()
           uses: actions/upload-artifact@v4
           with:
-            name: t11b-1
-            path: |
-              D:\a\Fido\Fido\t11b\tiny11.iso
-              D:\a\Fido\Fido\t11b\tiny11.log
-              1.t11b.out
-              2.c.out
-              3.d.out
+            name: out2
+            path: 03.c.xz
             compression-level: 9
-        - name: S7
-          uses: actions/upload-artifact@v4
-          with:
-            name: t11b-2
-            path: |
-              D:\
-              !D:/*.tmp
-              !D:\a\Fido\Fido\Win11_23H2_English_x64v2.iso
-              !D:\a\Fido\Fido\t11b\tiny11.iso
-              !D:\a\Fido\Fido\t11b\tiny11.log
-            compression-level: 9
+###        - name: S7
+###          uses: actions/upload-artifact@v4
+###          with:
+###            name: t11b-2
+###            path: |
+###              D:\
+###              !D:/*.tmp
+###              !D:\a\Fido\Fido\Win11_23H2_English_x64v2.iso
+###              !D:\a\Fido\Fido\t11b\tiny11.iso
+###              !D:\a\Fido\Fido\t11b\tiny11.log
+###            compression-level: 9
